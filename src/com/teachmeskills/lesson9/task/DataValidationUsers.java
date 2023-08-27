@@ -39,12 +39,12 @@ public class DataValidationUsers {
         char[] login = Login.toCharArray();
 
         if (login.length > 20){
-            throw new InvalidLoginException("error: login length exceeded");
+            throw new InvalidLoginException("login length exceeded");
         }
 
         for (char c : login) {
             if (c == ' '){
-                throw new InvalidLoginException("error: entered ' '");
+                throw new InvalidLoginException("entered ' '");
             }
         }
 
@@ -61,17 +61,17 @@ public class DataValidationUsers {
                 count++;
             }
             else if (c == ' '){
-                throw new InvalidPasswordException("error: entered ' '");
+                throw new InvalidPasswordException("entered ' '");
             }
         }
         if (count <= 0) {
-            throw new InvalidPasswordException("error: there is no digit");
+            throw new InvalidPasswordException("there is no digit");
         }
         if (password.length > 20){
-            throw new InvalidPasswordException("error: password length exceeded");
+            throw new InvalidPasswordException("password length exceeded");
         }
         if (!Arrays.equals(password, confirm_password)){
-            throw new InvalidPasswordException("error: passwords don't match");
+            throw new InvalidPasswordException("passwords don't match");
         }
         return true;
     }

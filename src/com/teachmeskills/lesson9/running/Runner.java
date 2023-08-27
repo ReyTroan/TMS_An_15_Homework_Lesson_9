@@ -12,7 +12,7 @@ public class Runner {
 
     public static void main(String[] args) {
         try {
-            if (DataValidationUsers.verificationUserData("Andre y", "qwerty123", "qwerty123")){
+            if (DataValidationUsers.verificationUserData("Andrey", "qwerty123", "qwerty123")){
                 System.out.println("Verification passed successfully");
             }
         }catch (InvalidPasswordException | InvalidLoginException e){
