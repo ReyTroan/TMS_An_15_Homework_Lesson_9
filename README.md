@@ -1,4 +1,5 @@
 In the folder "lesson9" there is a homework assignment on the topic "Exception" 
+
 The essence of the task:
 - create a class in which a method for validating user data will be created
 - create custom exceptions for the data validation method
